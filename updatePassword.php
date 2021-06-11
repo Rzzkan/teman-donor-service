@@ -23,7 +23,7 @@
            	die(json_encode($response)); 
         } else {
            $response->success = 0;
-           $response->message = "Old Password Not Match";
+           $response->message = "Sandi Lama Tidak Sesuai";
            die(json_encode($response)); 
         }    
 	}
