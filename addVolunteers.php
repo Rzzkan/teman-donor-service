@@ -5,6 +5,8 @@
 	$bloodtype_id = $_POST['bloodtype_id'];
 	$rhesus = $_POST['rhesus'];
 	$city_id = $_POST['city_id'];
+	$latitude = $_POST['latitude'];
+	$longitude = $_POST['longitude'];
 	$gender = $_POST['gender'];
 	$age = $_POST['age'];
 	$weight = $_POST['weight'];
@@ -16,7 +18,7 @@
 	$recovery_date = $_POST['recovery_date'];
 	$user_id = $_POST['user_id'];
 	
-	$query = mysqli_query($connect,"INSERT INTO volunteers (name, bloodtype_id, rhesus, city_id, gender, age, weight, phone, total_donor, last_donor, status_covid, symptoms, recovery_date, user_id ) VALUES ('$name', '$bloodtype_id', '$rhesus', '$city_id', '$gender', '$age', '$weight', '$phone', '$total_donor', '$last_donor', '$status_covid', '$symptoms', '$recovery_date', '$user_id')");
+	$query = mysqli_query($connect,"INSERT INTO volunteers (name, bloodtype_id, rhesus, city_id, latitude, longitude, gender, age, weight, phone, total_donor, last_donor, status_covid, symptoms, recovery_date, user_id ) VALUES ('$name', '$bloodtype_id', '$rhesus', '$city_id','$latitude','$longitude', '$gender', '$age', '$weight', '$phone', '$total_donor', '$last_donor', '$status_covid', '$symptoms', '$recovery_date', '$user_id')");
     //Handle Response
 	if ($query) {
 		$response->success = 1;
